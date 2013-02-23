@@ -19,6 +19,7 @@
 				<div class="container-fluid">
 					<a class="brand" href="<?php bloginfo('url') ?>" title="<?php bloginfo('name') ?>: <?php bloginfo('description') ?>"><?php bloginfo('name') ?></a>
 					<ul class="nav nav-middle">
+						<li class="navbar-text span3"><?php bloginfo('description') ?></li>
 						<li><a href="<?php echo get_settings('home'); ?>"><?php _e('Home') ?></a></li>
 						<?php wp_list_pages('title_li=&depth=2&sort_column=menu_order') ?>
 					</ul>
