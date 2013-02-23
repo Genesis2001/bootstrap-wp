@@ -1,0 +1,27 @@
+/*
+ * Theme Name: Bootstrap WP
+ * Theme URI: http://www.zloveless.com/wordpress/themes/bootstrap-wp/
+ * Description: 
+ * Version: 1.1.0
+ * Author: Zack Loveless
+ * Author URI: http://www.zloveless.com/
+ * Tags: gray, light, two-columns, flexible-width, right-sidebar
+ */
+
+@import url("css/bootstrap.css");
+
+/** Syntax Highlighter Fix **/
+body .syntaxhighlighter a,
+body .syntaxhighlighter div,
+body .syntaxhighlighter code,
+body .syntaxhighlighter table,
+body .syntaxhighlighter table td,
+body .syntaxhighlighter table tr,
+body .syntaxhighlighter table tbody,
+body .syntaxhighlighter table thead,
+body .syntaxhighlighter table caption,
+body .syntaxhighlighter textarea,
+body .syntaxhighlighter .gutter {
+    font-size: 10pt !important;
+    line-height: 11pt !important;
+}
