@@ -25,7 +25,7 @@ function bootstrap_the_category( $sep = ' ' )
 }
 
 add_action( 'init', 'bootstrap_wp_init' );
-function boostrap_wp_init()
+function bootstrap_wp_init()
 {
 	remove_action( 'admin_footer', 'wp_admin_bar_render', 1000 );
 	remove_action( 'wp_footer', 'wp_admin_bar_render', 1000 );
