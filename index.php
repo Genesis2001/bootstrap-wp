@@ -17,14 +17,14 @@
 			</div>
 		<?php endwhile; ?>
 		
-		<div class="span2 pull-left">
-			<?php if (function_exists('wp_pagenavi')): ?>
-				<?php wp_pagenavi(); ?>
-			<?php else: ?>
-				<div class="pull-left"><?php next_posts_link(__('&laquo; Previous Entries')) ?></div>
-				<div class="pull-right"><?php previous_posts_link(__('Next Entries &raquo;')) ?></div>
-			<?php endif; ?>
-		</div>
+		<?php if (function_exists('wp_pagenavi')): ?>
+			<?php wp_pagenavi(); ?>
+		<?php else: ?>
+			<ul class="pager pull-left span3">
+				<li><?php next_posts_link(__('Older')) ?></li>
+				<li><?php previous_posts_link(__('Newer')) ?></li>
+			</ul>
+		<?php endif; ?>
 	<?php else : ?>
 		<div class="well">
 			<h2><?php _e('Not Found') ?></h2>

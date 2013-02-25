@@ -53,3 +53,36 @@ function bootstrap_register_nav_menus()
 		'nav-menu' => __('Navigation'),
 	));
 }
+
+
+if ( function_exists('wp_pagenavi') )
+{
+	add_filter( 'wp_pagenavi', 'wp_pagenavi_filter' );
+	
+	function wp_pagenavi_filter( $html )
+	{
+		$html = str_replace( '<div class="pagination">', '<div class="pagination"><ul>', $html );
+		$html = str_replace( '<span class="current', '<li class="active', $html );
+		$html = str_replace( '</span>', '</li>', $html );
+		$html = str_replace( '</a>', '</a></li>', $html );
+		$html = str_replace( '<a', '<li><a', $html );
+		$html = str_replace( '</div>', '</ul></div>', $html );
+		
+		return $html;
+	}
+}
+else
+{
+	add_filter( 'next_posts_link_attributes',		'next_css_links' );
+	add_filter( 'previous_posts_link_attributes',	'prev_css_links' );
+	
+	function next_css_links()
+	{
+		return ' class="next"';
+	}
+	
+	function prev_css_links()
+	{
+		return ' class="previous"';
+	}
+}

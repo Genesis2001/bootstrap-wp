@@ -2,7 +2,7 @@
 			
 			<hr />
 			<footer>
-				<p>&copy; <?php echo date('Y') ?> <a href="<?php bloginfo('url') ?>"><?php bloginfo('name'); ?></a>. Designed with <a href="http://twitter.github.com/bootstrap">Bootstrap</a>.</p>
+				<p>&copy; <?php echo date('Y') ?> <a href="<?php bloginfo('url') ?>"><?php bloginfo('name'); ?></a>. Designed with <a href="http://twitter.github.com/bootstrap">Bootstrap 2.3</a>.</p>
 			</footer>
 		</div> <!-- /.container-fluid -->
 		
