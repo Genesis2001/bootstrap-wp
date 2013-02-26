@@ -72,14 +72,10 @@ if ( function_exists('wp_pagenavi') )
 		<li><a href="#">&raquo;</a></li>
 	</ul>
 </div> */
-	
+		
 		$html = str_replace( '<div class="wp-pagenavi">', '<div class="pagination"><ul>', $html );
-		
-		$html = str_replace( '<span class="current', '<li class="active', $html );
 		$html = str_replace( '</span>', '</li>', $html );
-		$html = str_replace( '</a>', '</a></li>', $html );
 		$html = str_replace( '<a', '<li><a', $html );
-		
 		$html = str_replace( '</div>', '</ul></div>', $html );
 		
 		return $html;
