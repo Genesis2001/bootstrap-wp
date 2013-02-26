@@ -61,7 +61,7 @@ if ( function_exists('wp_pagenavi') )
 	
 	function wp_pagenavi_filter( $html )
 	{
-		die( $html );
+		die( '<pre>' . $html . '</pre>' );
 /*
 <div class="pagination">
 	<ul>
