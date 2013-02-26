@@ -57,10 +57,23 @@ function bootstrap_register_nav_menus()
 
 if ( function_exists('wp_pagenavi') )
 {
-	add_filter( 'wp_pagenavi', 'wp_pagenavi_filter' );
+	add_filter( 'wp_pagenavi', 'wp_pagenavi_filter', 10, 1 );
 	
 	function wp_pagenavi_filter( $html )
 	{
+		die( $html );
+/*
+<div class="pagination">
+	<ul>
+		<li><span>Page 1 of 3</span></li>
+		<li class="disabled"><a href="#">&laquo;</a></li>
+		<li class="active"><a href="#">1</a></li>
+		<li><a href="#">2</a></li>
+		<li><a href="#">3</a></li>
+		<li><a href="#">&raquo;</a></li>
+	</ul>
+</div> */
+	
 		$html = str_replace( '<div class="wp-pagenavi">', '<div class="pagination"><ul>', $html );
 		
 		/*$html = str_replace( '<span class="current', '<li class="active', $html );
