@@ -61,7 +61,6 @@ if ( function_exists('wp_pagenavi') )
 	
 	function wp_pagenavi_filter( $html )
 	{
-		die( '<pre>' . $html . '</pre>' );
 /*
 <div class="pagination">
 	<ul>
@@ -76,10 +75,10 @@ if ( function_exists('wp_pagenavi') )
 	
 		$html = str_replace( '<div class="wp-pagenavi">', '<div class="pagination"><ul>', $html );
 		
-		/*$html = str_replace( '<span class="current', '<li class="active', $html );
+		$html = str_replace( '<span class="current', '<li class="active', $html );
 		$html = str_replace( '</span>', '</li>', $html );
 		$html = str_replace( '</a>', '</a></li>', $html );
-		$html = str_replace( '<a', '<li><a', $html );*/
+		$html = str_replace( '<a', '<li><a', $html );
 		
 		$html = str_replace( '</div>', '</ul></div>', $html );
 		
